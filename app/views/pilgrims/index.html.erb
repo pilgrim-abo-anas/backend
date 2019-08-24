@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pilgrims</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Sheep</th>
+      <th>Blood</th>
+      <th>Status</th>
+      <th>Admin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pilgrims.each do |pilgrim| %>
+      <tr>
+        <td><%= pilgrim.name %></td>
+        <td><%= pilgrim.phone %></td>
+        <td><%= pilgrim.type %></td>
+        <td><%= pilgrim.price %></td>
+        <td><%= pilgrim.sheep %></td>
+        <td><%= pilgrim.blood %></td>
+        <td><%= pilgrim.status %></td>
+        <td><%= pilgrim.admin %></td>
+        <td><%= link_to 'Show', pilgrim %></td>
+        <td><%= link_to 'Edit', edit_pilgrim_path(pilgrim) %></td>
+        <td><%= link_to 'Destroy', pilgrim, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pilgrim', new_pilgrim_path %>

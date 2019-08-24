@@ -1,0 +1,57 @@
+<%= form_with(model: pilgrim, local: true) do |form| %>
+  <% if pilgrim.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pilgrim.errors.count, "error") %> prohibited this pilgrim from being saved:</h2>
+
+      <ul>
+      <% pilgrim.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sheep %>
+    <%= form.text_field :sheep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blood %>
+    <%= form.text_field :blood %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admin_id %>
+    <%= form.text_field :admin_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

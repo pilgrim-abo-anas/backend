@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pilgrim.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @pilgrim.phone %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @pilgrim.type %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pilgrim.price %>
+</p>
+
+<p>
+  <strong>Sheep:</strong>
+  <%= @pilgrim.sheep %>
+</p>
+
+<p>
+  <strong>Blood:</strong>
+  <%= @pilgrim.blood %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @pilgrim.status %>
+</p>
+
+<p>
+  <strong>Admin:</strong>
+  <%= @pilgrim.admin %>
+</p>
+
+<%= link_to 'Edit', edit_pilgrim_path(@pilgrim) %> |
+<%= link_to 'Back', pilgrims_path %>
