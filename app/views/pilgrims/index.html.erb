@@ -1,3 +1,4 @@
+<%= render 'nav_admin' %>
 <p id="notice"><%= notice %></p>
 
 <h1>Pilgrims</h1>
@@ -7,7 +8,7 @@
     <tr>
       <th>Name</th>
       <th>Phone</th>
-      <th>Type</th>
+      <th>Pilgrim Type</th>
       <th>Price</th>
       <th>Sheep</th>
       <th>Blood</th>
@@ -22,7 +23,7 @@
       <tr>
         <td><%= pilgrim.name %></td>
         <td><%= pilgrim.phone %></td>
-        <td><%= pilgrim.type %></td>
+        <td><%= pilgrim.pilgrim_type %></td>
         <td><%= pilgrim.price %></td>
         <td><%= pilgrim.sheep %></td>
         <td><%= pilgrim.blood %></td>
