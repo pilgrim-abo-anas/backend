@@ -28,7 +28,7 @@
         <td><%= pilgrim.sheep %></td>
         <td><%= pilgrim.blood %></td>
         <td><%= pilgrim.status %></td>
-        <td><%= pilgrim.admin %></td>
+        <td><%= pilgrim.admin.first_name %> <%= pilgrim.admin.middle_name %> <%= pilgrim.admin.last_name %></td>
         <td><%= link_to 'Show', pilgrim %></td>
         <td><%= link_to 'Edit', edit_pilgrim_path(pilgrim) %></td>
         <td><%= link_to 'Destroy', pilgrim, method: :delete, data: { confirm: 'Are you sure?' } %></td>

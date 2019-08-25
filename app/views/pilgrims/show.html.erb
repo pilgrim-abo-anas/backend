@@ -38,7 +38,7 @@
 
 <p>
   <strong>Admin:</strong>
-  <%= @pilgrim.admin %>
+  <%= @pilgrim.admin.first_name %> <%= @pilgrim.admin.middle_name %> <%= @pilgrim.admin.last_name %>
 </p>
 
 <%= link_to 'Edit', edit_pilgrim_path(@pilgrim) %> |
