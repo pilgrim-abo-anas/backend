@@ -1,4 +1,5 @@
 class PilgrimsController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_pilgrim, only: [:show, :edit, :update, :destroy]
 
   # GET /pilgrims
@@ -25,9 +26,8 @@ class PilgrimsController < ApplicationController
   # POST /pilgrims.json
   def create
     @pilgrim = Pilgrim.new(pilgrim_params)
-
     respond_to do |format|
-      if @pilgrim.save
+      if @pilgrim.update(admin_id: current_admin.id)
         format.html { redirect_to @pilgrim, notice: 'Pilgrim was successfully created.' }
         format.json { render :show, status: :created, location: @pilgrim }
       else
@@ -69,6 +69,6 @@ class PilgrimsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pilgrim_params
-      params.require(:pilgrim).permit(:name, :phone, :type, :price, :sheep, :blood, :status, :admin_id)
+      params.require(:pilgrim).permit(:name, :phone, :type, :pilgrim_type, :sheep, :blood, :status)
     end
 end
