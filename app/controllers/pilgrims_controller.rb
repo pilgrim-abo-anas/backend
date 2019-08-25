@@ -69,6 +69,6 @@ class PilgrimsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pilgrim_params
-      params.require(:pilgrim).permit(:name, :phone, :type, :pilgrim_type, :sheep, :blood, :status)
+      params.require(:pilgrim).permit(:name, :phone, :price, :pilgrim_type, :sheep, :blood, :status)
     end
 end
