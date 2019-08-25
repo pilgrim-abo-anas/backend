@@ -28,7 +28,7 @@ class PilgrimsController < ApplicationController
     @pilgrim = Pilgrim.new(pilgrim_params)
     respond_to do |format|
       if @pilgrim.update(admin_id: current_admin.id)
-        format.html { redirect_to @pilgrim, notice: 'Pilgrim was successfully created.' }
+        format.html { redirect_to @pilgrim, notice: 'تم أنشئ الحاج' }
         format.json { render :show, status: :created, location: @pilgrim }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PilgrimsController < ApplicationController
   def update
     respond_to do |format|
       if @pilgrim.update(pilgrim_params)
-        format.html { redirect_to @pilgrim, notice: 'Pilgrim was successfully updated.' }
+        format.html { redirect_to @pilgrim, notice: 'تم تحديث الحاج' }
         format.json { render :show, status: :ok, location: @pilgrim }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PilgrimsController < ApplicationController
   def destroy
     @pilgrim.destroy
     respond_to do |format|
-      format.html { redirect_to pilgrims_url, notice: 'Pilgrim was successfully destroyed.' }
+      format.html { redirect_to pilgrims_url, notice: 'تم حذف الحاج' }
       format.json { head :no_content }
     end
   end
