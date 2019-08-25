@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e71de8bb-5f26-446d-8e22-083d05087432" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/pilgrims/_nav_admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pilgrims/_nav_admin.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pilgrims/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pilgrims/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pilgrims/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pilgrims/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pilgrims/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pilgrims/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pilgrims/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pilgrims/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pilgrims/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pilgrims/show.html.erb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -148,7 +151,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566684705635</updated>
-      <workItem from="1566684706825" duration="7525000" />
+      <workItem from="1566684706825" duration="9250000" />
     </task>
     <servers />
   </component>
