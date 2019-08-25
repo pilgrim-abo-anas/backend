@@ -1,19 +1,19 @@
 <%= render 'nav_admin' %>
 <p id="notice"><%= notice %></p>
 
-<h1>Pilgrims</h1>
+<h1>الحجاج</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Pilgrim Type</th>
-      <th>Price</th>
-      <th>Sheep</th>
-      <th>Blood</th>
-      <th>Status</th>
-      <th>Admin</th>
+      <th style="border: 1px solid black">الاسم</th>
+      <th style="border: 1px solid black">رقم الجوال</th>
+      <th style="border: 1px solid black">نوع الحج</th>
+      <th style="border: 1px solid black">رسوم الحملة</th>
+      <th style="border: 1px solid black">رسوم الهدي</th>
+      <th style="border: 1px solid black">رسوم الدم</th>
+      <th style="border: 1px solid black">هل تم الدفع</th>
+      <th style="border: 1px solid black">المنشئ</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,17 +21,23 @@
   <tbody>
     <% @pilgrims.each do |pilgrim| %>
       <tr>
-        <td><%= pilgrim.name %></td>
-        <td><%= pilgrim.phone %></td>
-        <td><%= pilgrim.pilgrim_type %></td>
-        <td><%= pilgrim.price %></td>
-        <td><%= pilgrim.sheep %></td>
-        <td><%= pilgrim.blood %></td>
-        <td><%= pilgrim.status %></td>
-        <td><%= pilgrim.admin.first_name %> <%= pilgrim.admin.middle_name %> <%= pilgrim.admin.last_name %></td>
-        <td><%= link_to 'Show', pilgrim %></td>
-        <td><%= link_to 'Edit', edit_pilgrim_path(pilgrim) %></td>
-        <td><%= link_to 'Destroy', pilgrim, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="border: 1px solid black"><%= pilgrim.name %></td>
+        <td style="border: 1px solid black"><%= pilgrim.phone %></td>
+        <td style="border: 1px solid black"><%= pilgrim.pilgrim_type %></td>
+        <td style="border: 1px solid black"><%= pilgrim.price %></td>
+        <td style="border: 1px solid black"><%= pilgrim.sheep %></td>
+        <td style="border: 1px solid black"><%= pilgrim.blood %></td>
+        <td style="border: 1px solid black">
+          <% if pilgrim.status %>
+          نعم
+          <% else %>
+          لا
+          <% end %>
+        </td>
+        <td style="border: 1px solid black"><%= pilgrim.admin.first_name %> <%= pilgrim.admin.middle_name %> <%= pilgrim.admin.last_name %></td>
+        <td><%= link_to 'اظهار', pilgrim %></td>
+        <td><%= link_to 'تعديل', edit_pilgrim_path(pilgrim) %></td>
+        <td><%= link_to 'حذف', pilgrim, method: :delete, data: { confirm: 'هل انت متأكد' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +45,4 @@
 
 <br>
 
-<%= link_to 'New Pilgrim', new_pilgrim_path %>
+<%= link_to 'حاج جديد', new_pilgrim_path %>

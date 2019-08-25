@@ -12,41 +12,41 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :الأسم %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <%= form.label :رقم_الجوال %>
     <%= form.text_field :phone %>
   </div>
 
   <div class="field">
-    <%= form.label :pilgrim_type %>
+    <%= form.label :نوع_الحج %>
     <%= form.select :pilgrim_type, options_for_select(["مفرد", "قارن", "متمتع"])  %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label :رسوم_الحملة %>
     <%= form.select :price, options_for_select([500, 1000, 2000])  %>
   </div>
 
   <div class="field">
-    <%= form.label :sheep %>
+    <%= form.label :رسوم_الهدي %>
     <%= form.select :sheep, options_for_select([0, 400])  %>
   </div>
 
   <div class="field">
-    <%= form.label :blood %>
+    <%= form.label :رسوم_دم %>
     <%= form.select :blood, options_for_select([0, 100])  %>
   </div>
 
   <div class="field">
-    <%= form.label :status %>
+    <%= form.label :تم_الدفع؟ %>
     <%= form.check_box :status %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "تم" %>
   </div>
 <% end %>

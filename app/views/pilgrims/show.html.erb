@@ -2,44 +2,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>الاسم:</strong>
   <%= @pilgrim.name %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>رقم الجوال:</strong>
   <%= @pilgrim.phone %>
 </p>
 
 <p>
-  <strong>Pilgrim type:</strong>
+  <strong>نوع الحج:</strong>
   <%= @pilgrim.pilgrim_type %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>رسوم الحملة:</strong>
   <%= @pilgrim.price %>
 </p>
 
 <p>
-  <strong>Sheep:</strong>
+  <strong>رسوم الهدي:</strong>
   <%= @pilgrim.sheep %>
 </p>
 
 <p>
-  <strong>Blood:</strong>
+  <strong>رسوم دم:</strong>
   <%= @pilgrim.blood %>
 </p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @pilgrim.status %>
+  <strong>هل تم الدفع؟:</strong>
+  <% if @pilgrim.status %>
+  نعم
+  <% else %>
+  لا
+  <% end %>
+
 </p>
 
 <p>
-  <strong>Admin:</strong>
+  <strong>المنشئ:</strong>
   <%= @pilgrim.admin.first_name %> <%= @pilgrim.admin.middle_name %> <%= @pilgrim.admin.last_name %>
 </p>
 
-<%= link_to 'Edit', edit_pilgrim_path(@pilgrim) %> |
-<%= link_to 'Back', pilgrims_path %>
+<%= link_to 'تعديل', edit_pilgrim_path(@pilgrim) %> |
+<%= link_to 'رجوع', pilgrims_path %>
