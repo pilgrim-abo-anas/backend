@@ -22,33 +22,28 @@
   </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type %>
+    <%= form.label :pilgrim_type %>
+    <%= form.select :pilgrim_type, options_for_select(["مفرد", "قارن", "متمتع"])  %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.select :price, options_for_select([500, 1000, 2000])  %>
   </div>
 
   <div class="field">
     <%= form.label :sheep %>
-    <%= form.text_field :sheep %>
+    <%= form.select :sheep, options_for_select([0, 400])  %>
   </div>
 
   <div class="field">
     <%= form.label :blood %>
-    <%= form.text_field :blood %>
+    <%= form.select :blood, options_for_select([0, 100])  %>
   </div>
 
   <div class="field">
     <%= form.label :status %>
     <%= form.check_box :status %>
-  </div>
-
-  <div class="field">
-    <%= form.label :admin_id %>
-    <%= form.text_field :admin_id %>
   </div>
 
   <div class="actions">
