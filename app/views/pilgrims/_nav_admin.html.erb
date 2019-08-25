@@ -1,3 +1,5 @@
+<h4> Welcome<%= current_admin.first_name %> <%= current_admin.middle_name %> <%= current_admin.last_name %> </h4>
 <%= link_to 'Sign Out', destroy_admin_session_path, method: :delete%>
 |
 <%= link_to 'Edit Account', edit_admin_registration_path %>
+<hr/>
